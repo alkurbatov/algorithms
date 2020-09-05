@@ -7,6 +7,7 @@ Algorithms development and testing playground based on one of Coursera courses.
 * A compiler with C++17 support.
 * boost (>= 1.71.0)
 * cmake (>= 3.18)
+* gtest (>= 1.10.0)
 
 ## Build instructions
 ```bash

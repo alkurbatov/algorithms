@@ -9,6 +9,10 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
 # Build with c++17 support.
 set(CMAKE_CXX_STANDARD 17)
 
+find_package(GTest REQUIRED)
+include_directories(${GTest_INCLUDE_DIRS})
+link_directories(${GTest_LIBRARY_DIRS})
+
 find_package(Boost 1.71.0 REQUIRED COMPONENTS random)
 include_directories(${Boost_INCLUDE_DIRS})
 link_directories(${Boost_LIBRARY_DIRS})
