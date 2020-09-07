@@ -1,2 +1,0 @@
-add_executable(max_pairwise_product solution.cpp)
-target_link_libraries(max_pairwise_product utils)
