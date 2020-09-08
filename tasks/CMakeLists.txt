@@ -11,3 +11,6 @@ target_link_libraries(fibonacci_last_digit gtest utils)
 
 add_executable(greatest_common_divisor greatest_common_divisor.cpp)
 target_link_libraries(greatest_common_divisor gtest utils)
+
+add_executable(least_common_multiple least_common_multiple.cpp)
+target_link_libraries(least_common_multiple gtest utils)
