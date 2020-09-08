@@ -6,5 +6,8 @@ target_link_libraries(max_pairwise_product utils)
 add_executable(fibonacci_number fibonacci_number.cpp)
 target_link_libraries(fibonacci_number gtest utils)
 
+add_executable(fibonacci_last_digit fibonacci_last_digit.cpp)
+target_link_libraries(fibonacci_last_digit gtest utils)
+
 add_executable(greatest_common_divisor greatest_common_divisor.cpp)
 target_link_libraries(greatest_common_divisor gtest utils)
