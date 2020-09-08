@@ -39,6 +39,10 @@ void test_solution() {
     ASSERT_LE(timer.elapsed(), 1000);
 
     timer.restart();
+    EXPECT_EQ(gcd_fast(18, 35), 1);
+    ASSERT_LE(timer.elapsed(), 1000);
+
+    timer.restart();
     EXPECT_EQ(gcd_fast(357, 234), 3);
     ASSERT_LE(timer.elapsed(), 1000);
 
