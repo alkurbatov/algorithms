@@ -7,7 +7,7 @@ struct Timer {
 
     void restart();
 
-    // Returns count of microseconds passed since
+    // Returns count of milliseconds passed since
     // object creation or the last restart call.
     unsigned elapsed() const;
 

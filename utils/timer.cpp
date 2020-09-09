@@ -10,6 +10,6 @@ void Timer::restart() {
 }
 
 unsigned Timer::elapsed() const {
-    return std::chrono::duration_cast<std::chrono::microseconds>(
+    return std::chrono::duration_cast<std::chrono::milliseconds>(
         std::chrono::high_resolution_clock::now() - m_start).count();
 }

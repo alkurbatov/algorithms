@@ -26,19 +26,19 @@ long long lcm_fast(long long a, long long b) {
 void test_solution() {
     auto timer = Timer();
     EXPECT_EQ(lcm_fast(6, 8), 24);
-    ASSERT_LE(timer.elapsed(), 1000000);
+    ASSERT_LE(timer.elapsed(), 1000);
 
     timer.restart();
     EXPECT_EQ(lcm_fast(12, 15), 60);
-    ASSERT_LE(timer.elapsed(), 1000000);
+    ASSERT_LE(timer.elapsed(), 1000);
 
     timer.restart();
     EXPECT_EQ(lcm_fast(761457, 614573), 467970912861);
-    ASSERT_LE(timer.elapsed(), 1000000);
+    ASSERT_LE(timer.elapsed(), 1000);
 
     timer.restart();
     EXPECT_EQ(lcm_fast(10000000, 9999999), 99999990000000);
-    ASSERT_LE(timer.elapsed(), 1000000);
+    ASSERT_LE(timer.elapsed(), 1000);
 }
 #endif
 } // namespace

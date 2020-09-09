@@ -31,11 +31,11 @@ void test_solution() {
 
     timer.restart();
     EXPECT_EQ(get_fibonacci_last_digit_fast(331), 9);
-    ASSERT_LE(timer.elapsed(), 1000000);
+    ASSERT_LE(timer.elapsed(), 1000);
 
     timer.restart();
     EXPECT_EQ(get_fibonacci_last_digit_fast(327305), 5);
-    ASSERT_LE(timer.elapsed(), 1000000);
+    ASSERT_LE(timer.elapsed(), 1000);
 }
 #endif
 } // namespace
