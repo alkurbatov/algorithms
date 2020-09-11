@@ -17,3 +17,6 @@ target_link_libraries(least_common_multiple gtest utils)
 
 add_executable(fibonacci_huge fibonacci_huge.cpp)
 target_link_libraries(fibonacci_huge gtest utils)
+
+add_executable(fibonacci_sum_last_digit fibonacci_sum_last_digit.cpp)
+target_link_libraries(fibonacci_sum_last_digit gtest utils)
