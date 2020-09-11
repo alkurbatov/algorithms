@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 
 #ifdef DEBUG
 #include <gtest/gtest.h>
@@ -9,18 +8,22 @@
 
 namespace {
 unsigned pisano_period(long long m) {
-    std::vector<unsigned> numbers;
-    numbers.push_back(0);
-    numbers.push_back(1);
+    unsigned previous = 0;
+    unsigned current  = 1;
 
-    for (int i = 2; ; ++i) {
-        numbers.push_back((numbers[i - 1] + numbers[i - 2]) % m);
+    int i = 1;
+    while(true) {
+        unsigned tmp_previous = previous;
+        previous = current;
+        current = (tmp_previous + current) % m;
 
-        if (numbers[i - 1] == 0 && numbers[i] == 1)
+        if (previous == 0 && current == 1)
             break;
+
+        ++i;
     }
 
-    return numbers.size() - 2;
+    return i;
 }
 
 unsigned fibonacchi_modulo(long long n, long long m) {
