@@ -53,6 +53,7 @@ unsigned fibonacci_huge(long long n, long long m) {
 #ifdef DEBUG
 void test_solution() {
     EXPECT_EQ(pisano_period(2), 3);
+    EXPECT_EQ(pisano_period(10), 60);
     EXPECT_EQ(pisano_period(13), 28);
     EXPECT_EQ(pisano_period(97), 196);
     EXPECT_EQ(pisano_period(133), 144);
