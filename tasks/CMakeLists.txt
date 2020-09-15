@@ -1,28 +1,18 @@
 include_directories(${PROJECT_SOURCE_DIR})
 
-add_executable(max_pairwise_product max_pairwise_product.cpp)
-target_link_libraries(max_pairwise_product utils)
+set(Solutions
+	car_fueling
+	change
+	fibonacci_huge
+	fibonacci_last_digit
+	fibonacci_number
+	fibonacci_sum_last_digit
+	greatest_common_divisor
+	least_common_multiple
+	max_pairwise_product
+)
 
-add_executable(fibonacci_number fibonacci_number.cpp)
-target_link_libraries(fibonacci_number gtest utils)
-
-add_executable(fibonacci_last_digit fibonacci_last_digit.cpp)
-target_link_libraries(fibonacci_last_digit gtest utils)
-
-add_executable(greatest_common_divisor greatest_common_divisor.cpp)
-target_link_libraries(greatest_common_divisor gtest utils)
-
-add_executable(least_common_multiple least_common_multiple.cpp)
-target_link_libraries(least_common_multiple gtest utils)
-
-add_executable(fibonacci_huge fibonacci_huge.cpp)
-target_link_libraries(fibonacci_huge gtest utils)
-
-add_executable(fibonacci_sum_last_digit fibonacci_sum_last_digit.cpp)
-target_link_libraries(fibonacci_sum_last_digit gtest utils)
-
-add_executable(car_fueling car_fueling.cpp)
-target_link_libraries(car_fueling gtest utils)
-
-add_executable(change change.cpp)
-target_link_libraries(change gtest utils)
+foreach(solution IN LISTS Solutions)
+	add_executable(${solution} ${solution}.cpp)
+	target_link_libraries(${solution} gtest utils)
+endforeach()
