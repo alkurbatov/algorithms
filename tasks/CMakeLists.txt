@@ -20,3 +20,6 @@ target_link_libraries(fibonacci_huge gtest utils)
 
 add_executable(fibonacci_sum_last_digit fibonacci_sum_last_digit.cpp)
 target_link_libraries(fibonacci_sum_last_digit gtest utils)
+
+add_executable(car_fueling car_fueling.cpp)
+target_link_libraries(car_fueling gtest utils)
