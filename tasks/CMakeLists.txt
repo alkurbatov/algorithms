@@ -7,6 +7,7 @@ set(Solutions
 	fibonacci_last_digit
 	fibonacci_number
 	fibonacci_sum_last_digit
+	fractional_knapsack
 	greatest_common_divisor
 	least_common_multiple
 	max_pairwise_product
