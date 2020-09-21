@@ -1,6 +1,7 @@
 include_directories(${PROJECT_SOURCE_DIR})
 
 set(Solutions
+	binary_search
 	car_fueling
 	change
 	dot_product
