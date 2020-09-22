@@ -12,6 +12,7 @@ set(Solutions
 	fractional_knapsack
 	greatest_common_divisor
 	least_common_multiple
+	majority_element
 	max_pairwise_product
 )
 
