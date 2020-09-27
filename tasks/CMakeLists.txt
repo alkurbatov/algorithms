@@ -14,6 +14,7 @@ set(Solutions
 	least_common_multiple
 	majority_element
 	max_pairwise_product
+	sorting
 )
 
 foreach(solution IN LISTS Solutions)
