@@ -4,6 +4,7 @@ set(Solutions
 	binary_search
 	car_fueling
 	change
+	change_dp
 	dot_product
 	fibonacci_huge
 	fibonacci_last_digit
