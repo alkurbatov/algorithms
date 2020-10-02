@@ -15,6 +15,7 @@ set(Solutions
 	least_common_multiple
 	majority_element
 	max_pairwise_product
+	primitive_calculator
 	sorting
 )
 
