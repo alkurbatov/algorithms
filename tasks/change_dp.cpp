@@ -29,11 +29,11 @@ unsigned solution(unsigned money) {
 
 #ifdef DEBUG
 void test_solution() {
-    EXPECT_EQ(solution(1), 1);
-    EXPECT_EQ(solution(2), 2);
-    EXPECT_EQ(solution(3), 1);
-    EXPECT_EQ(solution(4), 1);
-    EXPECT_EQ(solution(34), 9);
+    ASSERT_EQ(solution(1), 1);
+    ASSERT_EQ(solution(2), 2);
+    ASSERT_EQ(solution(3), 1);
+    ASSERT_EQ(solution(4), 1);
+    ASSERT_EQ(solution(34), 9);
 }
 #endif
 } // namespace

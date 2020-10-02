@@ -53,14 +53,14 @@ void test_solution() {
     items1.push_back(std::make_pair(120, 30));
 
     auto timer = Timer();
-    EXPECT_EQ(get_optimal_value(50, items1), 180.0000);
+    ASSERT_EQ(get_optimal_value(50, items1), 180.0000);
     ASSERT_LE(timer.elapsed(), 1000);
 
     std::vector<food_t> items2;
     items2.push_back(std::make_pair(500, 30));
 
     timer.restart();
-    EXPECT_EQ(get_optimal_value(10, items2), 166.6666);
+    ASSERT_EQ(get_optimal_value(10, items2), 166.6666);
     ASSERT_LE(timer.elapsed(), 1000);
 }
 #endif

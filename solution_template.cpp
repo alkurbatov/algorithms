@@ -14,11 +14,11 @@ unsigned solution(long long n) {
 #ifdef DEBUG
 void test_solution() {
     auto timer = Timer();
-    EXPECT_EQ(solution(1), 1);
+    ASSERT_EQ(solution(1), 1);
     ASSERT_LE(timer.elapsed(), 1000);
 
     timer.restart();
-    EXPECT_EQ(solution(2), 2);
+    ASSERT_EQ(solution(2), 2);
     ASSERT_LE(timer.elapsed(), 1000);
 }
 #endif

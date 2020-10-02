@@ -23,11 +23,11 @@ unsigned get_change(unsigned m) {
 #ifdef DEBUG
 void test_solution() {
     auto timer = Timer();
-    EXPECT_EQ(get_change(2), 2);
+    ASSERT_EQ(get_change(2), 2);
     ASSERT_LE(timer.elapsed(), 1000);
 
     timer.restart();
-    EXPECT_EQ(get_change(28), 6);
+    ASSERT_EQ(get_change(28), 6);
     ASSERT_LE(timer.elapsed(), 1000);
 }
 #endif

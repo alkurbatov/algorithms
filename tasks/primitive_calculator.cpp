@@ -60,9 +60,9 @@ void test_solution() {
 
     solution(1, &sequence);
     ASSERT_LE(timer.elapsed(), 1000);
-    EXPECT_EQ(sequence.size() - 1, 0);
+    ASSERT_EQ(sequence.size() - 1, 0);
     for (size_t i = 0; i < sequence.size(); ++i)
-        EXPECT_EQ(sequence[i], expected[i]);
+        ASSERT_EQ(sequence[i], expected[i]);
 
     timer.restart();
     sequence.clear();
@@ -70,9 +70,9 @@ void test_solution() {
 
     solution(5, &sequence);
     ASSERT_LE(timer.elapsed(), 1000);
-    EXPECT_EQ(sequence.size() - 1, 3);
+    ASSERT_EQ(sequence.size() - 1, 3);
     for (size_t i = 0; i < sequence.size(); ++i)
-        EXPECT_EQ(sequence[i], expected[i]);
+        ASSERT_EQ(sequence[i], expected[i]);
 
     timer.restart();
     sequence.clear();
@@ -80,9 +80,9 @@ void test_solution() {
 
     solution(96234, &sequence);
     //ASSERT_LE(timer.elapsed(), 1000);
-    EXPECT_EQ(sequence.size() - 1, 14);
+    ASSERT_EQ(sequence.size() - 1, 14);
     for (size_t i = 0; i < sequence.size(); ++i)
-        EXPECT_EQ(sequence[i], expected[i]);
+        ASSERT_EQ(sequence[i], expected[i]);
 }
 #endif
 } // namespace

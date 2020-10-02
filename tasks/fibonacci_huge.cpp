@@ -52,32 +52,32 @@ unsigned fibonacci_huge(long long n, long long m) {
 
 #ifdef DEBUG
 void test_solution() {
-    EXPECT_EQ(pisano_period(2), 3);
-    EXPECT_EQ(pisano_period(10), 60);
-    EXPECT_EQ(pisano_period(13), 28);
-    EXPECT_EQ(pisano_period(97), 196);
-    EXPECT_EQ(pisano_period(133), 144);
-    EXPECT_EQ(pisano_period(144), 24);
-    EXPECT_EQ(pisano_period(1000), 1500);
+    ASSERT_EQ(pisano_period(2), 3);
+    ASSERT_EQ(pisano_period(10), 60);
+    ASSERT_EQ(pisano_period(13), 28);
+    ASSERT_EQ(pisano_period(97), 196);
+    ASSERT_EQ(pisano_period(133), 144);
+    ASSERT_EQ(pisano_period(144), 24);
+    ASSERT_EQ(pisano_period(1000), 1500);
 
     auto timer = Timer();
-    EXPECT_EQ(fibonacci_huge(2015, 3), 1);
+    ASSERT_EQ(fibonacci_huge(2015, 3), 1);
     ASSERT_LE(timer.elapsed(), 1000);
 
     timer.restart();
-    EXPECT_EQ(fibonacci_huge(239, 1000), 161);
+    ASSERT_EQ(fibonacci_huge(239, 1000), 161);
     ASSERT_LE(timer.elapsed(), 1000);
 
     timer.restart();
-    EXPECT_EQ(fibonacci_huge(9999999999999, 2), 0);
+    ASSERT_EQ(fibonacci_huge(9999999999999, 2), 0);
     ASSERT_LE(timer.elapsed(), 1000);
 
     timer.restart();
-    EXPECT_EQ(fibonacci_huge(9999999999999, 1000), 626);
+    ASSERT_EQ(fibonacci_huge(9999999999999, 1000), 626);
     ASSERT_LE(timer.elapsed(), 1000);
 
     timer.restart();
-    EXPECT_EQ(fibonacci_huge(2816213588, 239), 151);
+    ASSERT_EQ(fibonacci_huge(2816213588, 239), 151);
     ASSERT_LE(timer.elapsed(), 1000);
 }
 #endif

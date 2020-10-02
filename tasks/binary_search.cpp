@@ -36,19 +36,19 @@ int binary_search(const std::vector<unsigned long>& data, unsigned long key) {
 void test_solution() {
     std::vector<unsigned long> a{1, 5, 8, 12, 13};
 
-    EXPECT_EQ(binary_search(a, 8), 2);
-    EXPECT_EQ(binary_search(a, 1), 0);
-    EXPECT_EQ(binary_search(a, 23), NOT_FOUND);
-    EXPECT_EQ(binary_search(a, 1), 0);
-    EXPECT_EQ(binary_search(a, 11), NOT_FOUND);
+    ASSERT_EQ(binary_search(a, 8), 2);
+    ASSERT_EQ(binary_search(a, 1), 0);
+    ASSERT_EQ(binary_search(a, 23), NOT_FOUND);
+    ASSERT_EQ(binary_search(a, 1), 0);
+    ASSERT_EQ(binary_search(a, 11), NOT_FOUND);
 
     a.assign({1, 2, 3, 4, 5});
 
-    EXPECT_EQ(binary_search(a, 1), 0);
-    EXPECT_EQ(binary_search(a, 2), 1);
-    EXPECT_EQ(binary_search(a, 3), 2);
-    EXPECT_EQ(binary_search(a, 4), 3);
-    EXPECT_EQ(binary_search(a, 5), 4);
+    ASSERT_EQ(binary_search(a, 1), 0);
+    ASSERT_EQ(binary_search(a, 2), 1);
+    ASSERT_EQ(binary_search(a, 3), 2);
+    ASSERT_EQ(binary_search(a, 4), 3);
+    ASSERT_EQ(binary_search(a, 5), 4);
 }
 #endif
 } // namespace

@@ -58,7 +58,7 @@ void test_solution() {
 
     ASSERT_LE(timer.elapsed(), 1000);
     for (size_t i = 0; i < data.size(); ++i)
-        EXPECT_EQ(data[i], expected[i]);
+        ASSERT_EQ(data[i], expected[i]);
 
     data.assign({ 2, 3, 9, 2, 9 });
     expected.assign({ 2, 2, 3, 9, 9 });
@@ -68,7 +68,7 @@ void test_solution() {
 
     ASSERT_LE(timer.elapsed(), 1000);
     for (size_t i = 0; i < data.size(); ++i)
-        EXPECT_EQ(data[i], expected[i]);
+        ASSERT_EQ(data[i], expected[i]);
 
     data.assign({ 2, 2, 9, 3, 1, 7, 1 });
     expected.assign({ 1, 1, 2, 2, 3, 7, 9 });
@@ -78,7 +78,7 @@ void test_solution() {
 
     ASSERT_LE(timer.elapsed(), 1000);
     for (size_t i = 0; i < data.size(); ++i)
-        EXPECT_EQ(data[i], expected[i]);
+        ASSERT_EQ(data[i], expected[i]);
 }
 #endif
 } // namespace

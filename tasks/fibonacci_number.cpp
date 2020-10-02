@@ -22,11 +22,11 @@ int fibonacci_fast(int n) {
 #ifdef DEBUG
 void test_solution() {
     auto timer = Timer();
-    EXPECT_EQ(fibonacci_fast(3), 2);
+    ASSERT_EQ(fibonacci_fast(3), 2);
     ASSERT_LE(timer.elapsed(), 1000);
 
     timer.restart();
-    EXPECT_EQ(fibonacci_fast(10), 55);
+    ASSERT_EQ(fibonacci_fast(10), 55);
     ASSERT_LE(timer.elapsed(), 1000);
 }
 #endif

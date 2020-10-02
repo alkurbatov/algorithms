@@ -29,14 +29,14 @@ void test_solution() {
     std::vector<long int> clicks{39};
 
     auto timer = Timer();
-    EXPECT_EQ(solution(values, clicks), 897);
+    ASSERT_EQ(solution(values, clicks), 897);
     ASSERT_LE(timer.elapsed(), 1000);
 
     values.assign({1, 3, -5});
     clicks.assign({-2, 4, 1});
 
     timer.restart();
-    EXPECT_EQ(solution(values, clicks), 23);
+    ASSERT_EQ(solution(values, clicks), 23);
     ASSERT_LE(timer.elapsed(), 1000);
 }
 #endif
