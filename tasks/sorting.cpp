@@ -3,6 +3,7 @@
 #include <utility>
 
 #ifdef DEBUG
+#include <gmock/gmock.h>
 #include <gtest/gtest.h>
 
 #include "utils/timer.h"
@@ -51,34 +52,25 @@ void randomized_quick_sort(std::vector<long long>& a, int l, int r) {
 #ifdef DEBUG
 void test_solution() {
     std::vector<long long> data{ 2, 3, 9, 2, 2 };
-    std::vector<long long> expected{ 2, 2, 2, 3, 9 };
-
     auto timer = Timer();
     randomized_quick_sort(data, 0, data.size() - 1);
 
     ASSERT_LE(timer.elapsed(), 1000);
-    for (size_t i = 0; i < data.size(); ++i)
-        ASSERT_EQ(data[i], expected[i]);
+    ASSERT_THAT(data, testing::ElementsAre(2, 2, 2, 3, 9));
 
     data.assign({ 2, 3, 9, 2, 9 });
-    expected.assign({ 2, 2, 3, 9, 9 });
-
     timer.restart();
     randomized_quick_sort(data, 0, data.size() - 1);
 
     ASSERT_LE(timer.elapsed(), 1000);
-    for (size_t i = 0; i < data.size(); ++i)
-        ASSERT_EQ(data[i], expected[i]);
+    ASSERT_THAT(data, testing::ElementsAre(2, 2, 3, 9, 9));
 
     data.assign({ 2, 2, 9, 3, 1, 7, 1 });
-    expected.assign({ 1, 1, 2, 2, 3, 7, 9 });
-
     timer.restart();
     randomized_quick_sort(data, 0, data.size() - 1);
 
     ASSERT_LE(timer.elapsed(), 1000);
-    for (size_t i = 0; i < data.size(); ++i)
-        ASSERT_EQ(data[i], expected[i]);
+    ASSERT_THAT(data, testing::ElementsAre(1, 1, 2, 2, 3, 7, 9));
 }
 #endif
 } // namespace
