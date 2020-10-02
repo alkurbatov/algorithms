@@ -24,11 +24,11 @@ unsigned get_change(unsigned m) {
 void test_solution() {
     auto timer = Timer();
     ASSERT_EQ(get_change(2), 2);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     timer.restart();
     ASSERT_EQ(get_change(28), 6);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 }
 #endif
 } // namespace

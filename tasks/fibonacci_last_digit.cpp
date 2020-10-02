@@ -27,15 +27,15 @@ int get_fibonacci_last_digit_fast(int n) {
 void test_solution() {
     auto timer = Timer();
     ASSERT_EQ(get_fibonacci_last_digit_fast(3), 2);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     timer.restart();
     ASSERT_EQ(get_fibonacci_last_digit_fast(331), 9);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     timer.restart();
     ASSERT_EQ(get_fibonacci_last_digit_fast(327305), 5);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 }
 #endif
 } // namespace

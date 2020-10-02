@@ -62,23 +62,23 @@ void test_solution() {
 
     auto timer = Timer();
     ASSERT_EQ(fibonacci_huge(2015, 3), 1);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     timer.restart();
     ASSERT_EQ(fibonacci_huge(239, 1000), 161);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     timer.restart();
     ASSERT_EQ(fibonacci_huge(9999999999999, 2), 0);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     timer.restart();
     ASSERT_EQ(fibonacci_huge(9999999999999, 1000), 626);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     timer.restart();
     ASSERT_EQ(fibonacci_huge(2816213588, 239), 151);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 }
 #endif
 } // namespace

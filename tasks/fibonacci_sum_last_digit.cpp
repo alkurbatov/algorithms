@@ -33,31 +33,31 @@ unsigned fibonacci_sum_last_digit(long long n) {
 void test_solution() {
     auto timer = Timer();
     ASSERT_EQ(fibonacci_sum_last_digit(0), 0);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     timer.restart();
     ASSERT_EQ(fibonacci_sum_last_digit(1), 1);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     timer.restart();
     ASSERT_EQ(fibonacci_sum_last_digit(3), 4);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     timer.restart();
     ASSERT_EQ(fibonacci_sum_last_digit(100), 5);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     timer.restart();
     ASSERT_EQ(fibonacci_sum_last_digit(240), 0);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     timer.restart();
     ASSERT_EQ(fibonacci_sum_last_digit(832564823476), 3);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     timer.restart();
     ASSERT_EQ(fibonacci_sum_last_digit(614162383528), 9);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 }
 #endif
 } // namespace

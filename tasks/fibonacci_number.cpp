@@ -23,11 +23,11 @@ int fibonacci_fast(int n) {
 void test_solution() {
     auto timer = Timer();
     ASSERT_EQ(fibonacci_fast(3), 2);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     timer.restart();
     ASSERT_EQ(fibonacci_fast(10), 55);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 }
 #endif
 } // namespace

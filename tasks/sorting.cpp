@@ -55,21 +55,21 @@ void test_solution() {
     auto timer = Timer();
     randomized_quick_sort(data, 0, data.size() - 1);
 
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
     ASSERT_THAT(data, testing::ElementsAre(2, 2, 2, 3, 9));
 
     data.assign({ 2, 3, 9, 2, 9 });
     timer.restart();
     randomized_quick_sort(data, 0, data.size() - 1);
 
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
     ASSERT_THAT(data, testing::ElementsAre(2, 2, 3, 9, 9));
 
     data.assign({ 2, 2, 9, 3, 1, 7, 1 });
     timer.restart();
     randomized_quick_sort(data, 0, data.size() - 1);
 
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
     ASSERT_THAT(data, testing::ElementsAre(1, 1, 2, 2, 3, 7, 9));
 }
 #endif

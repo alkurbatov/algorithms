@@ -37,19 +37,19 @@ void test_solution() {
     auto timer = Timer();
 
     ASSERT_TRUE(has_majority_element(data));
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     data.assign({ 1, 2, 3, 4 });
     timer.restart();
 
     ASSERT_FALSE(has_majority_element(data));
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     data.assign({ 1, 2, 3, 1 });
     timer.restart();
 
     ASSERT_FALSE(has_majority_element(data));
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 }
 #endif
 } // namespace

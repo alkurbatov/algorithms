@@ -15,11 +15,11 @@ unsigned solution(long long n) {
 void test_solution() {
     auto timer = Timer();
     ASSERT_EQ(solution(1), 1);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     timer.restart();
     ASSERT_EQ(solution(2), 2);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 }
 #endif
 } // namespace

@@ -59,7 +59,7 @@ void test_solution() {
     std::vector<unsigned> sequence;
 
     solution(1, &sequence);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
     ASSERT_EQ(sequence.size() - 1, 0);
     ASSERT_THAT(sequence, testing::ElementsAre(1));
 
@@ -67,7 +67,7 @@ void test_solution() {
     sequence.clear();
 
     solution(5, &sequence);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
     ASSERT_EQ(sequence.size() - 1, 3);
     ASSERT_THAT(sequence, testing::ElementsAre(1, 2, 4, 5));
 
@@ -75,7 +75,7 @@ void test_solution() {
     sequence.clear();
 
     solution(96234, &sequence);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
     ASSERT_EQ(sequence.size() - 1, 14);
     ASSERT_THAT(
         sequence,

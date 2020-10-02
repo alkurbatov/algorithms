@@ -39,22 +39,22 @@ void test_solution() {
     std::vector<unsigned> stops1{ 200, 375, 550, 750 };
     auto timer = Timer();
     ASSERT_EQ(compute_min_refills(950, 400, stops1), 2);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     std::vector<unsigned> stops2{ 1, 2, 5, 9 };
     timer.restart();
     ASSERT_EQ(compute_min_refills(10, 3, stops2), -1);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     std::vector<unsigned> stops3{ 100, 150 };
     timer.restart();
     ASSERT_EQ(compute_min_refills(200, 250, stops3), 0);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 
     std::vector<unsigned> stops4{ 100, 200, 300, 400 };
     timer.restart();
     ASSERT_EQ(compute_min_refills(700, 200, stops4), -1);
-    ASSERT_LE(timer.elapsed(), 1000);
+    EXPECT_LE(timer.elapsed(), 1000);
 }
 #endif
 } // namespace
