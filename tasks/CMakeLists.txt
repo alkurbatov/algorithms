@@ -6,6 +6,7 @@ set(Solutions
 	change
 	change_dp
 	dot_product
+	edit_distance
 	fibonacci_huge
 	fibonacci_last_digit
 	fibonacci_number
