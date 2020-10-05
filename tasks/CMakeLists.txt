@@ -13,6 +13,7 @@ set(Solutions
 	fibonacci_sum_last_digit
 	fractional_knapsack
 	greatest_common_divisor
+	knapsack
 	least_common_multiple
 	lcs2
 	majority_element
