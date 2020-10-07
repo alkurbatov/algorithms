@@ -18,6 +18,7 @@ set(Solutions
 	lcs2
 	majority_element
 	max_pairwise_product
+	partition3
 	primitive_calculator
 	sorting
 )
