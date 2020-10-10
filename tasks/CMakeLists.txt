@@ -25,5 +25,5 @@ set(Solutions
 
 foreach(solution IN LISTS Solutions)
 	add_executable(${solution} ${solution}.cpp)
-	target_link_libraries(${solution} gtest utils)
+	target_link_libraries(${solution} GTest::GTest utils)
 endforeach()
