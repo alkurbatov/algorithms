@@ -1,7 +1,5 @@
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin/toolbox)
 
-include_directories(${PROJECT_SOURCE_DIR})
-
 set(Solutions
 	binary_search
 	car_fueling
