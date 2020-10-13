@@ -4,6 +4,7 @@ include_directories(${PROJECT_SOURCE_DIR})
 
 set(Solutions
     check_brackets
+    process_packages
 )
 
 foreach(solution IN LISTS Solutions)
