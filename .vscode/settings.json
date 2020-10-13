@@ -81,5 +81,6 @@
         "ranges": "cpp",
         "stop_token": "cpp",
         "cinttypes": "cpp"
-    }
+    },
+    "editor.detectIndentation": false
 }
