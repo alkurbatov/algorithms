@@ -5,6 +5,7 @@ include_directories(${PROJECT_SOURCE_DIR})
 set(Solutions
     check_brackets
     process_packages
+    tree_height
 )
 
 foreach(solution IN LISTS Solutions)
