@@ -3,6 +3,7 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin/data_structures)
 include_directories(${PROJECT_SOURCE_DIR})
 
 set(Solutions
+    build_heap
     check_brackets
     process_packages
     stack_with_max
