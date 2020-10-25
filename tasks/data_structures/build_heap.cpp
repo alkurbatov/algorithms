@@ -3,7 +3,6 @@
 #include <vector>
 
 #ifdef DEBUG
-#include <gmock/gmock.h>
 #include <gtest/gtest.h>
 
 #include "utils/timer.h"
