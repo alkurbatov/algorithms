@@ -82,7 +82,8 @@
         "stop_token": "cpp",
         "cinttypes": "cpp",
         "filesystem": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "__functional_03": "cpp"
     },
     "editor.detectIndentation": false
 }
