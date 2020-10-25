@@ -5,6 +5,7 @@ include_directories(${PROJECT_SOURCE_DIR})
 set(Solutions
     build_heap
     check_brackets
+    job_queue
     process_packages
     stack_with_max
     tree_height
