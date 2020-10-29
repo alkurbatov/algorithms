@@ -22,7 +22,7 @@ struct Matrix {
     }
 
     void print() const {
-        for(size_t i = 0; i < m_matrix.size(); ++i) {
+        for (size_t i = 0; i < m_matrix.size(); ++i) {
             std::cout << m_matrix[i] << " ";
 
             if ((i + 1) % m_columns == 0)
@@ -36,11 +36,11 @@ struct Matrix {
 };
 
 
-unsigned solution(unsigned capacity, const std::vector<unsigned>& items) {
+unsigned solution(size_t capacity, const std::vector<unsigned>& items) {
     Matrix path_matrix(items.size() + 1, capacity + 1);
 
-    for (unsigned i = 1; i <= items.size(); ++i) {
-        for (unsigned w = 1; w <= capacity; ++w) {
+    for (size_t i = 1; i <= items.size(); ++i) {
+        for (size_t w = 1; w <= capacity; ++w) {
             path_matrix.set(i, w, path_matrix.get(i - 1, w));
 
             if (items[i - 1] > w)
@@ -70,11 +70,11 @@ void test_solution() {
 
 int main(int argc, char* argv[]) {
     if (argc == 1) {
-        unsigned n, W;
+        size_t n, W;
         std::cin >> W >> n;
 
         std::vector<unsigned> w(n);
-        for (unsigned i = 0; i < n; ++i)
+        for (size_t i = 0; i < n; ++i)
             std::cin >> w[i];
 
         std::cout << solution(W, w) << std::endl;

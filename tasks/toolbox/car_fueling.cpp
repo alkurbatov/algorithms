@@ -17,8 +17,8 @@ int compute_min_refills(unsigned dist, unsigned tank, const std::vector<unsigned
     route.insert(route.end(), stops.begin(), stops.end());
     route.push_back(dist);
 
-    while(route[current_stop] + tank < dist) {
-        for (unsigned i = current_stop; i < route.size(); ++i) {
+    while (route[current_stop] + tank < dist) {
+        for (size_t i = current_stop; i < route.size(); ++i) {
             if (route[current_stop] + tank >= route[i])
                 continue;
 

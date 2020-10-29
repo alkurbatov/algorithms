@@ -22,7 +22,7 @@ struct Matrix {
     }
 
     void print() const {
-        for(size_t i = 0; i < m_matrix.size(); ++i) {
+        for (size_t i = 0; i < m_matrix.size(); ++i) {
             std::cout << m_matrix[i] << " ";
 
             if ((i + 1) % m_columns == 0)
@@ -38,8 +38,8 @@ struct Matrix {
 unsigned solution(const std::vector<long int>& a, const std::vector<long int>& b) {
     Matrix path_matrix(a.size() + 1, b.size() + 1);
 
-    for (unsigned j = 1; j <= b.size(); ++j) {
-        for (unsigned i = 1; i <= a.size(); ++i) {
+    for (size_t j = 1; j <= b.size(); ++j) {
+        for (size_t i = 1; i <= a.size(); ++i) {
             if (a[i - 1] == b[j - 1]) {
                 path_matrix.set(i, j, path_matrix.get(i - 1, j - 1) + 1);
                 continue;

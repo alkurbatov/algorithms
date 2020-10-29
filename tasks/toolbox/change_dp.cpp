@@ -7,11 +7,11 @@
 #endif
 
 namespace {
-unsigned solution(unsigned money) {
+unsigned solution(size_t money) {
     const unsigned coins[3] = { 1, 3, 4 };
     std::vector<unsigned> min_num_coins(money + 1, 0);
 
-    for (unsigned m = 1; m <= money; ++m) {
+    for (size_t m = 1; m <= money; ++m) {
         min_num_coins[m] = std::numeric_limits<unsigned>::max();
 
         for (auto c : coins) {
@@ -40,7 +40,7 @@ void test_solution() {
 
 int main(int argc, char* argv[]) {
     if (argc == 1) {
-        unsigned n;
+        size_t n;
         std::cin >> n;
 
         std::cout << solution(n) << std::endl;

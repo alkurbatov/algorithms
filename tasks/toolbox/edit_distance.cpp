@@ -27,7 +27,7 @@ struct Matrix {
     }
 
     void print() const {
-        for(unsigned i = 0; i < m_matrix.size(); ++i) {
+        for (size_t i = 0; i < m_matrix.size(); ++i) {
             std::cout << m_matrix[i] << " ";
 
             if ((i + 1) % m_columns == 0)
@@ -43,14 +43,14 @@ struct Matrix {
 unsigned solution(const std::string& str1, const std::string& str2) {
     Matrix path_matrix(str1.length() + 1, str2.length() + 1);
 
-    for (unsigned i = 0; i <= str1.length(); ++i)
+    for (size_t i = 0; i <= str1.length(); ++i)
         path_matrix.set(i, 0, i);
 
-    for (unsigned j = 0; j <= str2.length(); ++j)
+    for (size_t j = 0; j <= str2.length(); ++j)
         path_matrix.set(0, j, j);
 
-    for (unsigned j = 1; j <= str2.length(); ++j) {
-        for (unsigned i = 1; i <= str1.length(); ++i) {
+    for (size_t j = 1; j <= str2.length(); ++j) {
+        for (size_t i = 1; i <= str1.length(); ++i) {
             unsigned insertion = path_matrix.get(i, j - 1) + 1;
             unsigned deletion = path_matrix.get(i - 1, j) + 1;
             unsigned match = path_matrix.get(i - 1, j - 1);

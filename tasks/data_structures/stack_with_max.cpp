@@ -40,12 +40,12 @@ struct StackWithMax {
 };
 
 int main() {
-    unsigned num_queries;
+    size_t num_queries;
     std::cin >> num_queries;
 
     StackWithMax stack(num_queries);
 
-    for (unsigned i = 0; i < num_queries; ++i) {
+    for (size_t i = 0; i < num_queries; ++i) {
         std::string query;
         std::cin >> query;
 

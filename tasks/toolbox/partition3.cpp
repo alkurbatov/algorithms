@@ -23,7 +23,7 @@ struct Matrix {
     }
 
     void print() const {
-        for(size_t i = 0; i < m_matrix.size(); ++i) {
+        for (size_t i = 0; i < m_matrix.size(); ++i) {
             std::cout << m_matrix[i] << " ";
 
             if ((i + 1) % m_columns == 0)
@@ -46,8 +46,8 @@ bool solution(const std::vector<unsigned>& items) {
 
     Matrix path_matrix(items.size() + 1, partition + 1);
 
-    for (unsigned i = 1; i <= items.size(); ++i) {
-        for (unsigned w = 1; w <= partition; ++w) {
+    for (size_t i = 1; i <= items.size(); ++i) {
+        for (size_t w = 1; w <= partition; ++w) {
             path_matrix.set(i, w, path_matrix.get(i - 1, w));
 
             if (items[i - 1] > w)
@@ -64,7 +64,7 @@ bool solution(const std::vector<unsigned>& items) {
 #endif
 
     unsigned counter = 0;
-    for (unsigned i = 1; i <= items.size(); ++i)
+    for (size_t i = 1; i <= items.size(); ++i)
         counter += static_cast<unsigned>(path_matrix.get(i, partition) == partition);
 
     return counter >= 3;
@@ -97,11 +97,11 @@ void test_solution() {
 
 int main(int argc, char* argv[]) {
     if (argc == 1) {
-        unsigned n;
+        size_t n;
         std::cin >> n;
 
         std::vector<unsigned> items(n);
-        for (unsigned i = 0; i < n; ++i)
+        for (size_t i = 0; i < n; ++i)
             std::cin >> items[i];
 
         std::cout << solution(items) << std::endl;

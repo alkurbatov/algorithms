@@ -24,7 +24,7 @@ struct Comp{
 struct Scheduler {
     Scheduler(unsigned num_threads, const std::vector<unsigned>& jobs):
         m_time(0), m_jobs(std::deque<unsigned>(jobs.begin(), jobs.end())) {
-        while(num_threads > 0)
+        while (num_threads > 0)
             m_idle_threads.push(--num_threads);
     }
 
@@ -37,7 +37,7 @@ struct Scheduler {
     }
 
     void nextTick() {
-        while(!m_busy_threads.empty()) {
+        while (!m_busy_threads.empty()) {
             if (m_time < m_busy_threads.top().second)
                 break;
 
@@ -50,7 +50,7 @@ struct Scheduler {
             m_busy_threads.pop();
         }
 
-        while(!m_idle_threads.empty() && !m_jobs.empty()) {
+        while (!m_idle_threads.empty() && !m_jobs.empty()) {
             unsigned id = m_idle_threads.top();
             unsigned long long done_at = m_time + m_jobs.front();
             m_busy_threads.emplace(id, done_at);
@@ -160,12 +160,12 @@ int main(int argc, char** argv) {
     if (argc == 1) {
         std::ios_base::sync_with_stdio(false);
 
-        unsigned num_threads, num_jobs;
+        size_t num_threads, num_jobs;
         std::cin >> num_threads >> num_jobs;
 
         std::vector<unsigned> jobs;
         jobs.resize(num_jobs);
-        for(unsigned i = 0; i < num_jobs; ++i)
+        for (size_t i = 0; i < num_jobs; ++i)
             std::cin >> jobs[i];
 
         auto schedule = solution(num_threads, jobs);

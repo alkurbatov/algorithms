@@ -76,7 +76,7 @@ struct Planner {
 
     void next_tick() {
         if (m_socket.ready()) {
-            while(!m_work_to_do.empty()) {
+            while (!m_work_to_do.empty()) {
                 auto pos = std::find(m_responses.begin(), m_responses.end(), SCHEDULED);
                 *pos = m_now;
 
@@ -130,8 +130,8 @@ std::vector<int> solution(unsigned buffer_size, const std::deque<Packet>& packet
     Planner planner(buffer_size);
     std::queue<Packet> input(packets);
 
-    while(!input.empty() || !planner.idle()) {
-        while(!input.empty()) {
+    while (!input.empty() || !planner.idle()) {
+        while (!input.empty()) {
             if (input.front().arrival_time != planner.now())
                 break;
 
@@ -236,7 +236,7 @@ void test_solution_on_file(const std::string& task, const std::string& answers) 
     task_file >> buffer_size >> count;
 
     std::deque<Packet> packets;
-    while(!task_file.eof()) {
+    while (!task_file.eof()) {
         unsigned arrival_time, process_time;
         task_file >> arrival_time >> process_time;
 
@@ -256,7 +256,7 @@ void test_solution_on_file(const std::string& task, const std::string& answers) 
     }
 
     unsigned index = 0;
-    while(!answers_file.eof()) {
+    while (!answers_file.eof()) {
         int answer;
         answers_file >> answer;
         ASSERT_EQ(responses[index], answer);

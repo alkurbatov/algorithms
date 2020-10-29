@@ -12,7 +12,7 @@ unsigned pisano_period(long long m) {
     unsigned current  = 1;
 
     int i = 1;
-    while(true) {
+    while (true) {
         unsigned tmp_previous = previous;
         previous = current;
         current = (tmp_previous + current) % m;

@@ -40,7 +40,7 @@ int main(int argc, char* argv[]) {
         std::cin >> n;
 
         std::vector<int> numbers(n);
-        for (unsigned i = 0; i < n; ++i)
+        for (size_t i = 0; i < n; ++i)
             std::cin >> numbers[i];
 
         std::cout << MaxPairwiseProduct(numbers) << std::endl;

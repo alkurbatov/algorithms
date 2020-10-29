@@ -11,11 +11,11 @@
 #endif
 
 namespace {
-void solution(unsigned n, std::vector<unsigned>* sequence) {
+void solution(size_t n, std::vector<unsigned>* sequence) {
     const unsigned multipliers[2] = { 2, 3 };
     std::vector<unsigned> min_num_steps(n + 1, 0);
 
-    for (unsigned i = 1; i <= n; ++i) {
+    for (size_t i = 1; i <= n; ++i) {
         min_num_steps[i] = min_num_steps[i - 1] + 1;
 
         for (auto m : multipliers) {
@@ -28,7 +28,7 @@ void solution(unsigned n, std::vector<unsigned>* sequence) {
         }
     }
 
-    while(n >= 1) {
+    while (n >= 1) {
         sequence->push_back(n);
 
         unsigned next_n = 0;
@@ -86,7 +86,7 @@ void test_solution() {
 
 int main(int argc, char* argv[]) {
     if (argc == 1) {
-        unsigned n;
+        size_t n;
         std::cin >> n;
 
         std::vector<unsigned> sequence;

@@ -28,7 +28,7 @@ unsigned solution(const std::vector<int>& src) {
     std::vector<Node> nodes(src.size());
 
     unsigned root_index = 0;
-    for (unsigned i = 0; i < src.size(); ++i) {
+    for (size_t i = 0; i < src.size(); ++i) {
       int parent_index = src[i];
 
       if (parent_index >= 0)
@@ -47,7 +47,7 @@ unsigned solution(const std::vector<int>& src) {
     std::vector<Node*> next_level;
     current_level.push_back(&nodes[root_index]);
 
-    while(!current_level.empty()) {
+    while (!current_level.empty()) {
         for (auto i : current_level) {
             if (i->children.empty())
                 continue;
@@ -83,14 +83,14 @@ void test_solution() {
 #endif
 }  // namespace
 
-int main (int argc, char** argv) {
+int main(int argc, char** argv) {
     if (argc == 1) {
         unsigned n;
         std::cin >> n;
 
         int key;
         std::vector<int> input;
-        while(std::cin >> key)
+        while (std::cin >> key)
             input.push_back(key);
 
         std::cout << solution(input) << std::endl;
