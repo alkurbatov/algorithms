@@ -6,6 +6,7 @@ set(Solutions
     build_heap
     check_brackets
     job_queue
+    merging_tables
     process_packages
     stack_with_max
     tree_height
