@@ -5,6 +5,7 @@ include_directories(${PROJECT_SOURCE_DIR})
 set(Solutions
     build_heap
     check_brackets
+    hash_chains
     job_queue
     merging_tables
     phone_book
