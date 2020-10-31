@@ -28,7 +28,7 @@ void test_solution() {
     std::vector<long int> values{23};
     std::vector<long int> clicks{39};
 
-    auto timer = Timer();
+    Timer timer;
     ASSERT_EQ(solution(values, clicks), 897);
     EXPECT_LE(timer.elapsed(), 1000);
 

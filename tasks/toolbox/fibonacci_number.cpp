@@ -21,7 +21,7 @@ int fibonacci_fast(int n) {
 
 #ifdef DEBUG
 void test_solution() {
-    auto timer = Timer();
+    Timer timer;
     ASSERT_EQ(fibonacci_fast(3), 2);
     EXPECT_LE(timer.elapsed(), 1000);
 

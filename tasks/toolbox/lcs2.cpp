@@ -58,7 +58,7 @@ unsigned solution(const std::vector<long int>& a, const std::vector<long int>& b
 
 #ifdef DEBUG
 void test_solution() {
-    auto timer = Timer();
+    Timer timer;
     ASSERT_EQ(solution({ 2, 7, 5 }, { 2, 5 }), 2);
     EXPECT_LE(timer.elapsed(), 1000);
 

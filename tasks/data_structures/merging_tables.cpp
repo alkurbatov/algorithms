@@ -83,7 +83,7 @@ struct TablesList {
 
 #ifdef DEBUG
 void test_case_1() {
-    auto timer = Timer();
+    Timer timer;
     TablesList tables({ 1, 1, 1, 1, 1 });
     tables.print();
 
@@ -111,7 +111,7 @@ void test_case_1() {
 }
 
 void test_case_2() {
-    auto timer = Timer();
+    Timer timer;
     TablesList tables({ 10, 0, 5, 0, 3, 3 });
     tables.print();
 

@@ -91,7 +91,7 @@ std::vector<std::pair<unsigned, unsigned long long>> solution(unsigned num_threa
 
 #ifdef DEBUG
 void test_solution() {
-    auto timer = Timer();
+    Timer timer;
     std::vector<std::pair<unsigned, unsigned long long>> expected{ {0, 0}, {1, 0}, {0, 1}, {1, 2}, {0, 4} };
 
     ASSERT_EQ(solution(2, { 1, 2, 3, 4, 5 }), expected);

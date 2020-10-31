@@ -60,7 +60,7 @@ void test_solution() {
     ASSERT_EQ(pisano_period(144), 24);
     ASSERT_EQ(pisano_period(1000), 1500);
 
-    auto timer = Timer();
+    Timer timer;
     ASSERT_EQ(fibonacci_huge(2015, 3), 1);
     EXPECT_LE(timer.elapsed(), 1000);
 

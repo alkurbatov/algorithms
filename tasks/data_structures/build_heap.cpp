@@ -65,7 +65,7 @@ std::vector< std::pair<unsigned, unsigned>> solution(const std::vector<unsigned>
 
 #ifdef DEBUG
 void test_solution() {
-    auto timer = Timer();
+    Timer timer;
     std::vector< std::pair<unsigned, unsigned>> expected{ {1, 4}, {0, 1}, {1, 3} };
 
     ASSERT_EQ(solution({ 5, 4, 3, 2, 1 }), expected);

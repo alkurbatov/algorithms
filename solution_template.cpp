@@ -13,7 +13,7 @@ unsigned solution(long long n) {
 
 #ifdef DEBUG
 void test_solution() {
-    auto timer = Timer();
+    Timer timer;
     ASSERT_EQ(solution(1), 1);
     EXPECT_LE(timer.elapsed(), 1000);
 

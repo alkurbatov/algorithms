@@ -34,7 +34,7 @@ bool has_majority_element(const std::vector<unsigned long>& data) {
 #ifdef DEBUG
 void test_solution() {
     std::vector<unsigned long> data{ 2, 3, 9, 2, 2 };
-    auto timer = Timer();
+    Timer timer;
 
     ASSERT_TRUE(has_majority_element(data));
     EXPECT_LE(timer.elapsed(), 1000);

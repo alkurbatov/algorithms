@@ -61,7 +61,7 @@ unsigned solution(size_t capacity, const std::vector<unsigned>& items) {
 
 #ifdef DEBUG
 void test_solution() {
-    auto timer = Timer();
+    Timer timer;
     ASSERT_EQ(solution(10, { 1, 4, 8 }), 9);
     EXPECT_LE(timer.elapsed(), 1000);
 }

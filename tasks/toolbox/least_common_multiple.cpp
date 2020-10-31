@@ -24,7 +24,7 @@ long long lcm_fast(long long a, long long b) {
 
 #ifdef DEBUG
 void test_solution() {
-    auto timer = Timer();
+    Timer timer;
     ASSERT_EQ(lcm_fast(6, 8), 24);
     EXPECT_LE(timer.elapsed(), 1000);
 

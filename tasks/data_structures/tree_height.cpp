@@ -65,7 +65,7 @@ unsigned solution(const std::vector<int>& src) {
 
 #ifdef DEBUG
 void test_solution() {
-    auto timer = Timer();
+    Timer timer;
 
     ASSERT_EQ(solution({ 4, ROOT, 4, 1, 1 }), 3);
     EXPECT_LE(timer.elapsed(), 1000);

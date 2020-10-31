@@ -52,7 +52,7 @@ void test_solution() {
     items1.push_back(std::make_pair(100, 50));
     items1.push_back(std::make_pair(120, 30));
 
-    auto timer = Timer();
+    Timer timer;
     ASSERT_EQ(get_optimal_value(50, items1), 180.0000);
     EXPECT_LE(timer.elapsed(), 1000);
 

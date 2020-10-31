@@ -31,7 +31,7 @@ unsigned fibonacci_sum_last_digit(long long n) {
 
 #ifdef DEBUG
 void test_solution() {
-    auto timer = Timer();
+    Timer timer;
     ASSERT_EQ(fibonacci_sum_last_digit(0), 0);
     EXPECT_LE(timer.elapsed(), 1000);
 

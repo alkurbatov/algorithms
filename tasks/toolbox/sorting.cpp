@@ -52,7 +52,7 @@ void randomized_quick_sort(std::vector<long long>& a, int l, int r) {
 #ifdef DEBUG
 void test_solution() {
     std::vector<long long> data{ 2, 3, 9, 2, 2 };
-    auto timer = Timer();
+    Timer timer;
     randomized_quick_sort(data, 0, data.size() - 1);
 
     EXPECT_LE(timer.elapsed(), 1000);

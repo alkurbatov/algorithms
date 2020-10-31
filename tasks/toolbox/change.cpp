@@ -22,7 +22,7 @@ unsigned get_change(unsigned m) {
 
 #ifdef DEBUG
 void test_solution() {
-    auto timer = Timer();
+    Timer timer;
     ASSERT_EQ(get_change(2), 2);
     EXPECT_LE(timer.elapsed(), 1000);
 

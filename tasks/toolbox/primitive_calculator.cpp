@@ -55,7 +55,7 @@ void solution(size_t n, std::vector<unsigned>* sequence) {
 
 #ifdef DEBUG
 void test_solution() {
-    auto timer = Timer();
+    Timer timer;
     std::vector<unsigned> sequence;
 
     solution(1, &sequence);

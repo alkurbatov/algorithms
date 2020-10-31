@@ -34,7 +34,7 @@ unsigned gcd_fast(unsigned a, unsigned b) {
 
 #ifdef DEBUG
 void test_solution() {
-    auto timer = Timer();
+    Timer timer;
     ASSERT_EQ(gcd_fast(19, 12), 1);
     EXPECT_LE(timer.elapsed(), 1000);
 

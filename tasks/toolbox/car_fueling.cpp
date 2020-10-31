@@ -37,7 +37,7 @@ int compute_min_refills(unsigned dist, unsigned tank, const std::vector<unsigned
 #ifdef DEBUG
 void test_solution() {
     std::vector<unsigned> stops1{ 200, 375, 550, 750 };
-    auto timer = Timer();
+    Timer timer;
     ASSERT_EQ(compute_min_refills(950, 400, stops1), 2);
     EXPECT_LE(timer.elapsed(), 1000);
 

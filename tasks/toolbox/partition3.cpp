@@ -72,7 +72,7 @@ bool solution(const std::vector<unsigned>& items) {
 
 #ifdef DEBUG
 void test_solution() {
-    auto timer = Timer();
+    Timer timer;
     ASSERT_EQ(solution({ 3, 3, 3, 3 }), 0);
     EXPECT_LE(timer.elapsed(), 1000);
 

@@ -74,7 +74,7 @@ unsigned solution(const std::string& str1, const std::string& str2) {
 
 #ifdef DEBUG
 void test_solution() {
-    auto timer = Timer();
+    Timer timer;
     ASSERT_EQ(solution("ab", "ab"), 0);
     EXPECT_LE(timer.elapsed(), 1000);
 

@@ -147,7 +147,7 @@ std::vector<int> solution(unsigned buffer_size, const std::deque<Packet>& packet
 
 #ifdef DEBUG
 void test_solution() {
-    auto timer = Timer();
+    Timer timer;
 
     ASSERT_TRUE(solution(1, {}).empty());
     EXPECT_LE(timer.elapsed(), 2000);
@@ -245,7 +245,7 @@ void test_solution_on_file(const std::string& task, const std::string& answers) 
 
     task_file.close();
 
-    auto timer = Timer();
+    Timer timer;
     std::vector<int> responses = solution(buffer_size, packets);
     EXPECT_LE(timer.elapsed(), 2000);
 
