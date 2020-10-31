@@ -7,6 +7,7 @@ set(Solutions
     check_brackets
     job_queue
     merging_tables
+    phone_book
     process_packages
     stack_with_max
     tree_height
