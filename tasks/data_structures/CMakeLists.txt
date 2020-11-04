@@ -6,6 +6,7 @@ set(Solutions
     build_heap
     check_brackets
     hash_chains
+    hash_substring
     job_queue
     max_sliding_window
     merging_tables
