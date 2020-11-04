@@ -85,5 +85,6 @@
         "list": "cpp",
         "__functional_03": "cpp"
     },
-    "editor.detectIndentation": false
+    "editor.detectIndentation": false,
+    "files.trimTrailingWhitespace": true
 }
