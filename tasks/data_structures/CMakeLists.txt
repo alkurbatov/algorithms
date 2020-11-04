@@ -7,6 +7,7 @@ set(Solutions
     check_brackets
     hash_chains
     job_queue
+    max_sliding_window
     merging_tables
     phone_book
     process_packages
