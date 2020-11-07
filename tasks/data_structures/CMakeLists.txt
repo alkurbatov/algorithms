@@ -14,6 +14,7 @@ set(Solutions
     process_packages
     stack_with_max
     tree_height
+    tree_orders
 )
 
 foreach(solution IN LISTS Solutions)
