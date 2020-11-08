@@ -7,6 +7,7 @@ set(Solutions
     check_brackets
     hash_chains
     hash_substring
+    is_bst
     job_queue
     max_sliding_window
     merging_tables
