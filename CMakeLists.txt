@@ -12,10 +12,6 @@ set(CMAKE_CXX_STANDARD 17)
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
-find_package(Boost 1.71.0 REQUIRED COMPONENTS random)
-include_directories(${Boost_INCLUDE_DIRS})
-link_directories(${Boost_LIBRARY_DIRS})
-
 if (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall \
         -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-padded \
