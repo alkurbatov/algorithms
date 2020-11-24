@@ -86,5 +86,6 @@
         "__functional_03": "cpp"
     },
     "editor.detectIndentation": false,
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "workbench.colorTheme": "Visual Studio Light - C++"
 }
