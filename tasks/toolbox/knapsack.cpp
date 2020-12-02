@@ -35,7 +35,6 @@ struct Matrix {
     std::vector<unsigned> m_matrix;
 };
 
-
 unsigned solution(size_t capacity, const std::vector<unsigned>& items) {
     Matrix path_matrix(items.size() + 1, capacity + 1);
 
