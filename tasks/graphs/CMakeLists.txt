@@ -4,6 +4,7 @@ set(Solutions
     acyclicity
     connected_components
     reachability
+    toposort
 )
 
 foreach(solution IN LISTS Solutions)
