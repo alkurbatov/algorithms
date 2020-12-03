@@ -1,6 +1,7 @@
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin/graphs)
 
 set(Solutions
+    acyclicity
     connected_components
     reachability
 )
