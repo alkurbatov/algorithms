@@ -91,6 +91,7 @@ void test_solution() {
     ASSERT_TRUE(graph.hasCycle());
     EXPECT_LE(timer.elapsed(), 1000);
 
+    timer.restart();
     graph.reset(5);
     graph.link(1, 2);
     graph.link(2, 3);

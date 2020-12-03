@@ -83,6 +83,7 @@ void test_solution() {
     ASSERT_TRUE(graph.reachable(1, 4));
     EXPECT_LE(timer.elapsed(), 1000);
 
+    timer.restart();
     graph.reset(4);
     graph.link(1, 2);
     graph.link(3, 2);
@@ -90,6 +91,7 @@ void test_solution() {
     ASSERT_FALSE(graph.reachable(1, 4));
     EXPECT_LE(timer.elapsed(), 1000);
 
+    timer.restart();
     graph.reset(100);
     graph.link(17, 69);
     graph.link(29, 50);
