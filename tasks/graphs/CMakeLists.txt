@@ -4,6 +4,7 @@ set(Solutions
     acyclicity
     connected_components
     reachability
+    strongly_connected
     toposort
 )
 
