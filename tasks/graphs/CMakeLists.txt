@@ -3,6 +3,7 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin/graphs)
 set(Solutions
     acyclicity
     bfs
+    bipartite
     connected_components
     reachability
     strongly_connected
