@@ -5,6 +5,7 @@ set(Solutions
     bfs
     bipartite
     connected_components
+    dijkstra
     reachability
     strongly_connected
     toposort
