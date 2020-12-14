@@ -6,6 +6,7 @@ set(Solutions
     bipartite
     connected_components
     dijkstra
+    negative_cycle
     reachability
     strongly_connected
     toposort
