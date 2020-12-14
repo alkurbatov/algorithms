@@ -8,6 +8,7 @@ set(Solutions
     dijkstra
     negative_cycle
     reachability
+    shortest_paths
     strongly_connected
     toposort
 )
