@@ -5,6 +5,7 @@ set(Solutions
     bfs
     bipartite
     connected_components
+    connecting_points
     dijkstra
     negative_cycle
     reachability
